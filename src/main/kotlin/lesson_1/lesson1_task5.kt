@@ -10,6 +10,7 @@ fun main() {
     seconds %=  secondsInHour
     val minute: Int = seconds / secondsInMinute
     seconds %=  secondsInMinute
+
     println(String.format("%02d:%02d:%02d", hour, minute, seconds))
 
 }
