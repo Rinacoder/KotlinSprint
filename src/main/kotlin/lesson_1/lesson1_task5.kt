@@ -1,15 +1,15 @@
 package org.example.lesson_1
 
-const val secondsInHour = 3600
-const val secondsInMinute = 60
+const val SECONDS_IN_HOUR = 3600
+const val SECONDS_IN_ MINUTE = 60
 
 fun main() {
 
     var seconds: Int = 6480
-    val hour: Int = seconds / secondsInHour
-    seconds %=  secondsInHour
-    val minute: Int = seconds / secondsInMinute
-    seconds %=  secondsInMinute
+    val hour: Int = seconds / SECONDS_IN_HOUR
+    seconds %=  SECONDS_IN_HOUR
+    val minute: Int = seconds / SECONDS_IN_ MINUTE
+    seconds %=  SECONDS_IN_ MINUTE
 
     println(String.format("%02d:%02d:%02d", hour, minute, seconds))
 
