@@ -1,14 +1,13 @@
 package org.example.lesson_3
 
 fun main() {
-    println("move:")
-    val move = readLine()?.split("-",";")
+    val move = "D2-D4;0".split("-",";")
 
-    val initialPositionFigure = move?.get(0)
-    val finalFigurePosition = move?.get(1)
-    val strokeNumber = move?.get(2)
+    val from = move[0]
+    val to = move[1]
+    val turnNumber = move[2]
 
-    println(initialPositionFigure)
-    println(finalFigurePosition)
-    println(strokeNumber)
+    println(from)
+    println(to)
+    println(turnNumber)
 }
