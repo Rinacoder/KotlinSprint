@@ -1,11 +1,12 @@
 package org.example.lesson_4
 
 fun main() {
-    val day = 5
+    val dayNumber = 5
+    val isEven = dayNumber % 2 == 0
     println(
-        "Упражнения для рук: ${day % 2 != 0}\n" +
-                "Упражнения для ног: ${day % 2 == 0}\n" +
-                "Упражнения для спины: ${day % 2 == 0}\n" +
-                "Упражнения для спины: ${day % 2 != 0}"
+        "Упражнения для рук: ${!isEven}\n" +
+                "Упражнения для ног: $isEven\n" +
+                "Упражнения для спины: $isEven\n" +
+                "Упражнения для пресса: ${!isEven}"
     )
 }
