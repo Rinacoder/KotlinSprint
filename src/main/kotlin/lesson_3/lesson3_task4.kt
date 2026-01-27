@@ -1,17 +1,17 @@
 package org.example.lesson_3
 
 fun main() {
-    var initialPositionFigure = "E2"
-    var finalFigurePosition = "E4"
+    var startPosition = "E2"
+    var finalPosition = "E4"
     var strokeNumber = 1
 
-    var move = "[$initialPositionFigure-$finalFigurePosition; $strokeNumber]"
+    var move = "[$startPosition-$finalPosition;$strokeNumber]"
     println(move)
 
-    initialPositionFigure = "D2"
-    finalFigurePosition = "D3"
-    strokeNumber = 2
+    startPosition = "D2"
+    finalPosition = "D3"
+    strokeNumber++
 
-    move = "[$initialPositionFigure-$finalFigurePosition; $strokeNumber]"
+    move = "[$startPosition-$finalPosition;$strokeNumber]"
     println(move)
 }
