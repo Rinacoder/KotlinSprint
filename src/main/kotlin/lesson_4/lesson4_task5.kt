@@ -6,7 +6,7 @@ const val MIN_PROVISIONS = 50
 
 fun main() {
     println("the presence of damage to the case:")
-    val isPresenceDamage = readln().toBoolean()
+    val isDamaged = readln().toBoolean()
     println("current crew composition:")
     val numberCrew = readln().toInt()
     println("the number of crates of provisions:")
@@ -15,7 +15,7 @@ fun main() {
     val isWeatherFavorable = readln().toBoolean()
 
     val isOpportunitySetSail =
-        (!isPresenceDamage && numberCrew >= MIN_NUMBER_CREW && numberCrew <= MAX_NUMBER_CREW && provisions > 50) ||
-                (isPresenceDamage && isWeatherFavorable && numberCrew == MAX_NUMBER_CREW && provisions >= MIN_PROVISIONS)
+        (!isDamaged && numberCrew >= MIN_NUMBER_CREW && numberCrew <= MAX_NUMBER_CREW && provisions > MIN_PROVISIONS) ||
+                (isDamaged && isWeatherFavorable && numberCrew == MAX_NUMBER_CREW && provisions >= MIN_PROVISIONS)
     println("Can the ship set sail? $isOpportunitySetSail")
 }
