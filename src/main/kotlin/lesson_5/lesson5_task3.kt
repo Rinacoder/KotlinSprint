@@ -1,11 +1,14 @@
 package org.example.lesson_5
 
+const val MIN_NUMBER = 0
+const val MAX_NUMBER = 42
+
 fun main() {
     val number1 = 13
     val number2 = 37
-    println("Enter the first number from 0 to 42")
+    println("Enter the first number from $MIN_NUMBER to $MAX_NUMBER")
     val userNumber1 = readln().toInt()
-    println("Enter the second  number from 0 to 42")
+    println("Enter the second  number from $MIN_NUMBER to $MAX_NUMBER")
     val userNumber2 = readln().toInt()
 
     if ((number1 == userNumber1 && number2 == userNumber2) || (number1 == userNumber2 && number2 == userNumber1)) {
