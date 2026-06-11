@@ -2,7 +2,7 @@ package org.example.lesson_6
 
 fun main() {
     println("Введите количество секунд:")
-    var remainingSeconds = readln().toInt()
+    val remainingSeconds = readln().toInt()
     var count = remainingSeconds
     while (count > 0) {
         Thread.sleep(1000)
