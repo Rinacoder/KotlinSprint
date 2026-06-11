@@ -2,22 +2,18 @@ package org.example.lesson_6
 
 fun main() {
     println("Создайте логин:")
-    var login = readln()
+    val login = readln()
     println("Создайте пароль")
-    var password = readln()
+    val password = readln()
 
-    var isAuthorized = false  // флаг: авторизация прошла
-
-    while (!isAuthorized) {
+    do {
         println("Введите логин:")
-        var userLogin = readln()
+        val userLogin = readln()
         println("Введите пароль")
-        var userPassword = readln()
+        val userPassword = readln()
         if (userLogin != login || userPassword != password) {
             println("Неверный логин или пароль")
-        } else {
-            isAuthorized = true
         }
-    }
+    } while (userLogin != login || userPassword != password)
     println("Авторизация прошла успешно")
 }
