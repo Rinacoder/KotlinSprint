@@ -2,13 +2,12 @@
 
 fun main() {
     val password = StringBuilder()
+    val letters = 'a'..'z'
+    val digits = '0'..'9'
 
     for (i in 1..6) {
-        if (i % 2 != 0) {
-            password.append(('a'..'z').random())
-        } else {
-            password.append(('0'..'9').random())
-        }
+        password.append(if (i % 2 != 0) letters.random() else digits.random())
+
     }
 
     println(password)
