@@ -1,13 +1,13 @@
-﻿    package org.example.lesson_7
+﻿package org.example.lesson_7
 
-    fun main() {
-        println("Введите количество секунд:")
-        val allSeconds = readln().toInt()
+fun main() {
+    println("Введите количество секунд:")
+    val allSeconds = readln().toInt()
 
-        for (second in allSeconds downTo 0){
-            println("Осталось $second секунд")
-            Thread.sleep(1000)
-        }
-
-        println("Время вышло")
+    for (second in allSeconds downTo 1) {
+        println("Осталось $second секунд")
+        Thread.sleep(1000)
     }
+
+    println("Время вышло")
+}
