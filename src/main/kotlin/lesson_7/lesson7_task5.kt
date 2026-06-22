@@ -1,9 +1,9 @@
 ﻿package org.example.lesson_7
 
 fun main() {
+    val result = mutableListOf<Char>()
     println("Введите длину пароля не меньше 6")
     val length = readln().toInt()
-    val password = StringBuilder()
     val lowercase = 'a'..'z'
     val uppercase = 'A'..'Z'
     val digits = '0'..'9'
@@ -15,11 +15,12 @@ fun main() {
         range = 1..6
     }
     for (i in range) {
-        when ((0..2).random()) {
-            0 -> password.append(lowercase.random())
-            1 -> password.append(uppercase.random())
-            2 -> password.append(digits.random())
+        when (i) {
+            in 1..range.last / 3 -> result.add(lowercase.random())
+            in range.last / 3 + 1..range.last / 3 * 2 -> result.add(uppercase.random())
+            else  -> result.add(digits.random())
         }
     }
+    val password = result.shuffled().joinToString("")
     println(password)
 }
