@@ -2,17 +2,16 @@
 
 fun main() {
     println("Введите длину пароля")
-    val password = passwordGenerator(readln().toInt())
+    val password = generatePassword(readln().toInt())
     println("Пароль: $password")
 }
 
-fun passwordGenerator(length: Int): String {
+fun generatePassword(length: Int): String {
     val password = mutableListOf<String>()
-    val elements = mutableListOf("!", "\"", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", " ")
     for (i in 1..length) {
         when {
             i % 2 != 0 -> password.add((0..9).random().toString())
-            else -> password.add((elements).random())
+            else -> password.add((' '..'/').random().toString())
         }
     }
     return password.joinToString("")
